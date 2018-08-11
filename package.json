@@ -1,0 +1,11 @@
+{
+  "name": "bbx.github.io",
+  "version": "1.0.0",
+  "description": "--- home: true actionText: 快速上手 actionLink: /intro/ features: - title: 超简单 👶   details: 了解 api 几乎没成本，会用 React 即会用 bbx，或许你已经会用了 - title: 清晰 🌞   details: 状态管理清清楚楚，方法调用也直观明了。 - title: 扩展性 🐣   details: bbx 内置了许多项目开发中常用的方法，当然你也能很方便的开发更多的方法 footer: MIT Licensed | Copyright © 2018-present ---",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
