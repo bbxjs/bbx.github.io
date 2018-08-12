@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>loading 修饰器 | bbx</title>
+    <meta name="description" content="𝕓𝕓𝕩 是一个极其简单高效的 React 状态管理方式">
+    
+    
+    <link rel="preload" href="/assets/css/0.styles.c0f2f7c2.css" as="style"><link rel="preload" href="/assets/js/app.33d8de5c.js" as="script"><link rel="preload" href="/assets/js/10.918a7aeb.js" as="script"><link rel="prefetch" href="/assets/js/4.abb0cd79.js"><link rel="prefetch" href="/assets/js/2.cda51ec0.js"><link rel="prefetch" href="/assets/js/3.43e946e8.js"><link rel="prefetch" href="/assets/js/5.243e3497.js"><link rel="prefetch" href="/assets/js/6.38a2bab3.js"><link rel="prefetch" href="/assets/js/7.f7419cb0.js"><link rel="prefetch" href="/assets/js/8.7db7f669.js"><link rel="prefetch" href="/assets/js/9.80977c60.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.c0f2f7c2.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">bbx</span></a> <div class="links" style="max-width:nullpx;"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/start/" class="nav-link router-link-active">开始使用</a></div> <a href="https://github.com/bbxjs/bbx" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/start/" class="nav-link router-link-active">开始使用</a></div> <a href="https://github.com/bbxjs/bbx" target="_blank" rel="noopener noreferrer" class="repo-link">
+    GitHub
+    <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></nav>  <ul class="sidebar-links"><li><div class="sidebar-group first"><p class="sidebar-heading"><span>开始使用</span> <!----></p> <ul class="sidebar-group-items"><li><a href="/start/" class="sidebar-link">bbx 介绍</a></li><li><a href="/start/getting-started.html" class="sidebar-link">快速上手</a></li><li><a href="/start/async.html" class="sidebar-link">异步方法</a></li></ul></div></li><li><div class="sidebar-group"><p class="sidebar-heading open"><span>进阶</span> <!----></p> <ul class="sidebar-group-items"><li><a href="/start/extend.html" class="sidebar-link">扩展</a></li><li><a href="/start/loading.html" class="active sidebar-link">loading 修饰器</a></li><li><a href="/start/latest.html" class="sidebar-link">latest 修饰器</a></li></ul></div></li></ul> </div> <div class="page"> <div class="content"><h1 id="loading-修饰器"><a href="#loading-修饰器" aria-hidden="true" class="header-anchor">#</a> loading 修饰器</h1> <p>为了简化判断一个异步方法是否执行完成，可采用 loading <a href="http://es6.ruanyifeng.com/#docs/decorator" target="_blank" rel="noopener noreferrer">修饰器<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>。</p> <p>在 <a href="/start/async.html">“开始使用 - 异步方法”</a>，发起了一个请求用户的异步方法：</p> <div class="language-jsx extra-class"><pre class="language-jsx"><code><span class="token operator">...</span>
+<span class="token keyword">async</span> <span class="token function">requestUser</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> <span class="token punctuation">{</span> name<span class="token punctuation">,</span> age <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">request</span><span class="token punctuation">(</span><span class="token string">'/api/user.json'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    name<span class="token punctuation">,</span>
+    age<span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token operator">...</span>
+</code></pre></div><p>因为 requestUser 是一个异步方法，那在请求返回前，想要在界面上加一个 loading 告诉用户正在请求，这个要怎么做呢？</p> <p>一个方式是修改 requestUser 方法，在请求前加一个属性表示正在请求，之后再修改这个属性表示请求完成。</p> <div class="language-jsx extra-class"><pre class="language-jsx"><code><span class="token operator">...</span>
+<span class="token keyword">async</span> <span class="token function">requestUser</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// 添加一个 requestUserLoading 用来表示是否在 loading</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    requestUserLoading<span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">const</span> <span class="token punctuation">{</span> name<span class="token punctuation">,</span> age <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">request</span><span class="token punctuation">(</span><span class="token string">'/api/user.json'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    name<span class="token punctuation">,</span>
+    age<span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token comment">// 请求完成，requestUserLoading 改为 false</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    requestUserLoading<span class="token punctuation">:</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token operator">...</span>
+</code></pre></div><p>之后在 App 里就能使用了：</p> <div class="language-jsx extra-class"><pre class="language-jsx"><code><span class="token keyword">import</span> <span class="token punctuation">{</span> connect <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'bbx'</span><span class="token punctuation">;</span>
+
+@<span class="token function">connect</span><span class="token punctuation">(</span>user<span class="token punctuation">)</span>
+<span class="token keyword">class</span> <span class="token class-name">App</span> <span class="token keyword">extends</span> <span class="token class-name">React<span class="token punctuation">.</span>Component</span> <span class="token punctuation">{</span>
+  <span class="token function">componentDidMount</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    user<span class="token punctuation">.</span><span class="token function">requestUser</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> user<span class="token punctuation">.</span>state<span class="token punctuation">.</span>requestUserLoading <span class="token operator">?</span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+        loading...
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+      <span class="token punctuation">:</span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+        </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">{</span>user<span class="token punctuation">.</span>state<span class="token punctuation">.</span>name<span class="token punctuation">}</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+        </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">{</span>user<span class="token punctuation">.</span>state<span class="token punctuation">.</span>age<span class="token punctuation">}</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">
+      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>但是，要是有不少异步方法都要去改？</p> <p>bbx 内置了 “loading 修饰器” 来简化，只用给这个异步方法使用 “@loading” 即可：</p> <div class="language-jsx extra-class"><pre class="language-jsx"><code><span class="token operator">...</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> loading <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'bbx'</span>
+
+@loading
+<span class="token keyword">async</span> <span class="token function">requestUser</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">const</span> <span class="token punctuation">{</span> name<span class="token punctuation">,</span> age <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">await</span> <span class="token function">request</span><span class="token punctuation">(</span><span class="token string">'/api/user.json'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    name<span class="token punctuation">,</span>
+    age<span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token operator">...</span>
+</code></pre></div><p>给异步方法使用 @loading，即可在 state 里添加一个 <code>$方法名}Loading</code> 的属性用来表示异步方法是否执行完成。对于 async requestUser 就会添加一个 requestUserLoading 的属性用来判断是否完成了异步方法。</p> <p><a href="https://stackblitz.com/edit/bbx-example-loading" target="_blank" rel="noopener noreferrer">查看在线可运行<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <h1 id="说明"><a href="#说明" aria-hidden="true" class="header-anchor">#</a> 说明</h1> <ul><li><strong>loading 修饰器</strong></li></ul> <p>采用 @loading 作用于一个异步方法，让 state 里添加一个 <code>${方法名}Loading</code> 的属性</p> <ul><li><strong>作用于非 async function</strong></li></ul> <p>对于非 async function，要使用 “loading 修饰器”，这个异步方法要返回一个 Promise。比如:</p> <div class="language-jsx extra-class"><pre class="language-jsx"><code>@loading
+<span class="token function">fetchUser</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token comment">// 因为 fetchUser 不是 async function，就要 return 一个 Promise</span>
+  <span class="token keyword">return</span> <span class="token function">request</span><span class="token punctuation">(</span><span class="token string">'/api/user.json'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>json <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> <span class="token punctuation">{</span> name<span class="token punctuation">,</span> age <span class="token punctuation">}</span> <span class="token operator">=</span> json<span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      name<span class="token punctuation">,</span>
+      age<span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div></div> <div class="page-edit"><div class="edit-link"><a href="https://github.com/bbxjs/bbx/edit/master/docs/start/loading.md" target="_blank" rel="noopener noreferrer">在 GitHub 上编辑此页</a> <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></div> <div class="last-updated"><span class="prefix">Last Updated: </span> <span class="time">8/12/2018, 12:35:32 PM</span></div></div> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/start/extend.html" class="prev">
+          扩展
+        </a></span> <span class="next"><a href="/start/latest.html">
+          latest 修饰器
+        </a>
+        →
+      </span></p></div> </div> <!----></div></div>
+    <script src="/assets/js/10.918a7aeb.js" defer></script><script src="/assets/js/app.33d8de5c.js" defer></script>
+  </body>
+</html>
